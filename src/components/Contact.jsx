@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
 import React from 'react';
+import { email_id } from '../common.jsx/common';
 const Contact = () => {
   return (
     <section id="contact" className="min-h-screen bg-primary py-20 px-4 flex items-center justify-center">
@@ -15,7 +16,7 @@ const Contact = () => {
           or just want to say hi, I'll try my best to get back to you!
         </p>
         <motion.a
-          href="mailto:your.email@example.com"
+          href={`mailto:${email_id}`}
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
           className="inline-block border-2 border-secondary text-secondary px-8 py-4 rounded-lg hover:bg-secondary/10"

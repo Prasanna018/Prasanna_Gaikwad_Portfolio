@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion';
+import movie_loom from '../assets/movie-loom.png'
 import { useInView } from 'react-intersection-observer';
 import React from 'react';
 const Projects = () => {
@@ -12,7 +13,7 @@ const Projects = () => {
       title: "Movie-Loom Website",
       description: "A full-stack (Netflix like) platform built with MERN stack",
       tech: ["React", "Node.js", "MongoDB", "Express"],
-      image: "../assets/movie-loom.png",
+      image: movie_loom,
     },
     {
       title: "Social Media App",

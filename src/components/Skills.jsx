@@ -1,7 +1,7 @@
-import { motion } from 'framer-motion';
+import { color, motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
-import { FaReact, FaNodeJs, FaDatabase } from 'react-icons/fa';
-import { SiExpress, SiMongodb } from 'react-icons/si';
+import { FaReact, FaNodeJs, FaDatabase, } from 'react-icons/fa';
+import { SiExpress, SiMongodb, SiJavascript, SiMysql, SiPostgresql, SiRedis, SiPostman } from 'react-icons/si';
 import React from 'react';
 const Skills = () => {
   const [ref, inView] = useInView({
@@ -15,6 +15,12 @@ const Skills = () => {
     { name: 'Express.js', icon: SiExpress, color: '#000000' },
     { name: 'MongoDB', icon: SiMongodb, color: '#47A248' },
     { name: 'REST APIs', icon: FaDatabase, color: '#FF6B6B' },
+    { name: "Javascript", icon: SiJavascript, color: '#f7df1e' },
+    { name: "MySql", icon: SiMysql, color: '#f29111' },
+    { name: "Postgres", icon: SiPostgresql, color: "#0064a5" },
+    { name: "Redis", icon: SiRedis, color: "#7A0C00" },
+    { name: "Postman", icon: SiPostman, color: "#EF5B25" }
+
   ];
 
   return (

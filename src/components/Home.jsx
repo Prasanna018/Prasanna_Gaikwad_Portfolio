@@ -6,15 +6,15 @@ const Home = () => {
     <section id="home" className="pt-[20px] min-h-screen flex items-center justify-center bg-primary px-4">
       <div className="max-w-4xl">
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: 20 }} z
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
         >
           <p className="text-secondary mb-4">Hi, my name is</p>
-          <h1 className="text-5xl md:text-7xl font-bold text-textPrimary mb-4">
-            John Doe
+          <h1 className="text-5xl md:text-6xl font-bold text-textPrimary mb-4">
+            Prasanna Gaikwad
           </h1>
-          <h2 className="text-4xl md:text-6xl font-bold text-textSecondary mb-6">
+          <h2 className="text-4xl md:text-5xl font-bold text-textSecondary mb-6">
             I build things for the web.
           </h2>
           <p className="text-textSecondary max-w-2xl mb-8">

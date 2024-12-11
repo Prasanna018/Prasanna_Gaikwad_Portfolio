@@ -9,10 +9,10 @@ const Projects = () => {
 
   const projects = [
     {
-      title: "E-Commerce Platform",
-      description: "A full-stack e-commerce platform built with MERN stack",
+      title: "Movie-Loom Website",
+      description: "A full-stack (Netflix like) platform built with MERN stack",
       tech: ["React", "Node.js", "MongoDB", "Express"],
-      image: "https://via.placeholder.com/500x300",
+      image: "../assets/movie-loom.png",
     },
     {
       title: "Social Media App",

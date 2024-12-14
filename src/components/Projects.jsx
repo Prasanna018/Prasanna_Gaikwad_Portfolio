@@ -73,7 +73,9 @@ const Projects = () => {
                 </div>
                 <div className='flex justify-center items-center'>
 
-                  <a className='underline text-blue-700 font-bold' target='_blank' href={project.link}>Live Demo</a>
+                  {
+                    project.link ? (<a className='underline text-blue-700 font-bold' target='_blank' href={project.link}>Live Demo</a>) : ""
+                  }
                 </div>
               </div>
             </motion.div>

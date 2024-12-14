@@ -14,17 +14,18 @@ const Projects = () => {
       description: "A full-stack (Netflix like) platform built with MERN stack",
       tech: ["React", "Node.js", "MongoDB", "Express"],
       image: movie_loom,
+      link: "https://movie-loom-client.onrender.com/"
     },
     {
-      title: "Social Media App",
-      description: "Real-time social media application with chat functionality",
-      tech: ["React", "Socket.io", "Node.js", "MongoDB"],
+      title: "Comming Soon",
+      description: "",
+      tech: [],
       image: "https://via.placeholder.com/500x300",
     },
     {
-      title: "Task Management",
-      description: "Collaborative task management system with real-time updates",
-      tech: ["React", "Redux", "Node.js", "MongoDB"],
+      title: "Comming Soon",
+      description: "",
+      tech: [],
       image: "https://via.placeholder.com/500x300",
     },
   ];
@@ -67,7 +68,12 @@ const Projects = () => {
                     >
                       {tech}
                     </span>
+
                   ))}
+                </div>
+                <div className='flex justify-center items-center'>
+
+                  <a className='underline text-blue-700 font-bold' target='_blank' href={project.link}>Live Demo</a>
                 </div>
               </div>
             </motion.div>

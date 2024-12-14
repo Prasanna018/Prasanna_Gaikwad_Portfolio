@@ -15,14 +15,14 @@ const Navbar = () => {
   return (
     <nav className="fixed w-full bg-primary/90 backdrop-blur-sm z-50">
       <div className="max-w-6xl mx-auto px-4">
-        <div className="flex justify-between items-center h-16">
+        <div className="flex justify-between items-center h-16 ">
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.5 }}
-            className="text-secondary font-bold text-xl"
+            className="text-secondary font-bold text-xl cursor-pointer"
           >
-            JD
+            <Link to='home'> Prasanna Gaikwad</Link>
           </motion.div>
 
           {/* Desktop Menu */}

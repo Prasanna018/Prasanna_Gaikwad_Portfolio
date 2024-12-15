@@ -19,7 +19,7 @@ const Projects = () => {
     },
     {
       title: "Quick-Rent Renting Platform",
-      description: "A frontend of a rental platform designed for fast and seamless renting options",
+      description: "A Responsive frontend of a rental platform designed for fast and seamless renting options",
       tech: ['React', 'Tailwind', 'Framer-Motion', 'CSS'],
       image: quick_rent,
       link: "http://renting-platform-frontend.vercel.app/"

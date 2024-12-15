@@ -13,7 +13,7 @@ const Navbar = () => {
     { name: 'Skills', to: 'skills' },
     { name: 'Projects', to: 'projects' },
     { name: 'Contact', to: 'contact' },
-    { name: 'Resume', to: "/public/resume.pdf", download: "MY_RESUME.PDF" }
+    { name: 'Resume', to: "/public/resume.pdf", download: "Prasanna_Gaikwad_Resume_Pdf" }
 
   ];
 

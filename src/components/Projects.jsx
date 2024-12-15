@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
 import movie_loom from '../assets/movie-loom.png'
+import quick_rent from '../assets/quick-rent.png'
 import { useInView } from 'react-intersection-observer';
 import React from 'react';
 const Projects = () => {
@@ -17,10 +18,11 @@ const Projects = () => {
       link: "https://movie-loom-client.onrender.com/"
     },
     {
-      title: "Comming Soon",
-      description: "",
-      tech: [],
-      image: "https://via.placeholder.com/500x300",
+      title: "Quick-Rent Renting Platform",
+      description: "Quick-Rent is a rental platform designed to facilitate the fast and seamless renting of various items like phones,electricals etc",
+      tech: ['React', 'Tailwind', 'Framer-Motion'],
+      image: quick_rent,
+      link: "http://renting-platform-frontend.vercel.app/"
     },
     {
       title: "Comming Soon",

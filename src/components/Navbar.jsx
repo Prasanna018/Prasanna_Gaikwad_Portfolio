@@ -4,12 +4,17 @@ import { motion } from 'framer-motion';
 import React from 'react';
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [active, setActive] = useState('home');
+  console.log(active)
+
 
   const navItems = [
     { name: 'Home', to: 'home' },
     { name: 'Skills', to: 'skills' },
     { name: 'Projects', to: 'projects' },
     { name: 'Contact', to: 'contact' },
+    { name: 'Resume', to: "/public/resume.pdf", download: "MY_RESUME.PDF" }
+
   ];
 
   return (
@@ -34,14 +39,24 @@ const Navbar = () => {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
               >
-                <Link
-                  to={item.to}
-                  smooth={true}
-                  duration={500}
-                  className="text-textSecondary hover:text-secondary cursor-pointer"
-                >
-                  {item.name}
-                </Link>
+                {
+                  item.download ? (<a href={item.to} download={item.download} >
+                    {item.name}
+                  </a>) :
+                    (<Link
+
+                      to={item.to}
+                      smooth={true}
+                      duration={500}
+
+                      className={` text-textSecondary hover:text-secondary cursor-pointer`}
+                    >
+
+                      {item.name}
+                    </Link>)
+                }
+
+
               </motion.div>
             ))}
           </div>
@@ -86,20 +101,36 @@ const Navbar = () => {
             transition={{ duration: 0.2 }}
             className="md:hidden"
           >
+
             <div className="px-2 pt-2 pb-3 space-y-1">
-              {navItems.map((item) => (
-                <Link
+              {navItems.map((item, index) => (
+                <motion.div
                   key={item.name}
-                  to={item.to}
-                  smooth={true}
-                  duration={500}
-                  className="block text-textSecondary hover:text-secondary py-2"
-                  onClick={() => setIsOpen(false)}
+                  initial={{ opacity: 0, y: -20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5, delay: index * 0.1 }}
                 >
-                  {item.name}
-                </Link>
+                  {
+                    item.download ? (<a href={item.to} download={item.download} >
+                      {item.name}
+                    </a>) :
+                      (<Link
+                        to={item.to}
+                        smooth={true}
+                        duration={500}
+
+                        className="text-textSecondary hover:text-secondary cursor-pointer"
+                      >
+
+                        {item.name}
+                      </Link>)
+                  }
+
+
+                </motion.div>
               ))}
             </div>
+
           </motion.div>
         )}
       </div>

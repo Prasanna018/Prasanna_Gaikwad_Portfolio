@@ -25,7 +25,7 @@ const Contact = () => {
         </motion.a>
         <div className="mt-16 flex justify-center space-x-8">
           <motion.a
-            href="https://github.com"
+            href="https://github.com/prasanna018"
             target="_blank"
             rel="noopener noreferrer"
             whileHover={{ y: -5 }}
@@ -43,7 +43,7 @@ const Contact = () => {
             LinkedIn
           </motion.a>
           <motion.a
-            href="https://twitter.com"
+            href="https://x.com/Prasanna_0019"
             target="_blank"
             rel="noopener noreferrer"
             whileHover={{ y: -5 }}

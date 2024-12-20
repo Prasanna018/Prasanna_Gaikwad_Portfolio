@@ -2,6 +2,7 @@ import { motion } from 'framer-motion';
 import movie_loom from '../assets/movie-loom.png'
 import quick_rent from '../assets/quick-rent.png'
 import { useInView } from 'react-intersection-observer';
+import blog_verse from '../assets/blogverse.png'
 import React from 'react';
 const Projects = () => {
   const [ref, inView] = useInView({
@@ -26,9 +27,9 @@ const Projects = () => {
     },
     {
       title: "Comming Soon",
-      description: "",
+      description: "A full stack Bloging website for every categories where peoples share there stories",
       tech: [],
-      image: "https://via.placeholder.com/500x300",
+      image: blog_verse,
     },
   ];
 

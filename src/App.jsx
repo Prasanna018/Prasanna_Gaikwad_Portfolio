@@ -24,7 +24,7 @@ function App() {
           top: 0,
           left: 0,
           right: 0,
-          height: 10,
+          height: 7,
           originX: 0,
           zIndex: 100,
           backgroundColor: "#f30283",

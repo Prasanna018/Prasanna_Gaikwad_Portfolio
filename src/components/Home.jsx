@@ -11,7 +11,7 @@ const Home = () => {
           transition={{ duration: 0.5 }}
         >
           <p className="text-secondary mb-4">Hi, my name is</p>
-          <h1 className="text-5xl md:text-6xl font-bold text-textPrimary mb-4">
+          <h1 className="text-5xl md:text-6xl font-extrabold text-textPrimary mb-4">
             Prasanna Gaikwad
           </h1>
           <h2 className="text-4xl md:text-5xl font-bold text-textSecondary mb-6">

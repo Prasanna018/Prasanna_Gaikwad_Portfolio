@@ -6,12 +6,12 @@ const Home = () => {
     <section id="home" className="pt-[20px] min-h-screen flex items-center justify-center bg-primary px-4">
       <div className="max-w-4xl">
         <motion.div
-          initial={{ opacity: 0, y: 20 }} z
+          initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
         >
           <p className="text-secondary mb-4">Hi, my name is</p>
-          <h1 className="text-5xl md:text-6xl font-extrabold text-textPrimary mb-4">
+          <h1 className="text-5xl md:text-6xl font-extra text-textPrimary mb-4">
             Prasanna Gaikwad
           </h1>
           <h2 className="text-4xl md:text-5xl font-bold text-textSecondary mb-6">

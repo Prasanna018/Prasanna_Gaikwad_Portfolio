@@ -1,4 +1,4 @@
-import { motion } from 'framer-motion';
+import { color, motion } from 'framer-motion';
 import React from 'react';
 import { email_id } from '../common.jsx/common';
 const Contact = () => {
@@ -37,7 +37,7 @@ const Contact = () => {
             href="https://linkedin.com"
             target="_blank"
             rel="noopener noreferrer"
-            whileHover={{ y: -5 }}
+            whileHover={{ y: -5, }}
             className="text-textSecondary hover:text-secondary"
           >
             LinkedIn
@@ -53,7 +53,7 @@ const Contact = () => {
           </motion.a>
         </div>
       </motion.div>
-    </section>
+    </section >
   );
 };
 

@@ -30,7 +30,7 @@ const Projects = () => {
       description: "A full stack Bloging website for every categories where peoples share there stories",
       tech: [],
       image: blog_verse,
-    },
+    }
   ];
 
   return (

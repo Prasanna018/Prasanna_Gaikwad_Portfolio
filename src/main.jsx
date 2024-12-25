@@ -4,8 +4,20 @@ import { createRoot } from 'react-dom/client'
 import App from './App.jsx'
 import './index.css'
 
+import { bubbleCursor } from 'cursor-effects'
+
+new bubbleCursor({
+  shape: "ring",
+  size: 25,
+  color: "red",
+})
+
 createRoot(document.getElementById('root')).render(
-  <StrictMode>
+
+  < StrictMode >
+    <emojiCursor></emojiCursor>
+
+
     <App />
-  </StrictMode>,
+  </StrictMode >,
 )

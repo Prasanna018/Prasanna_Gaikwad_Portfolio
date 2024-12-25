@@ -22,7 +22,8 @@ const Skills = () => {
     { name: "Redis", icon: SiRedis, color: "#7A0C00" },
     { name: "Postman", icon: SiPostman, color: "#EF5B25" },
     { name: "Docker", icon: FaDocker, color: "#0db7ed" },
-    { name: "Typescript", icon: SiTypescript, color: "#007acc" }
+    { name: "Typescript", icon: SiTypescript, color: "#007acc" },
+
 
   ];
 

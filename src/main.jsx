@@ -15,7 +15,7 @@ new bubbleCursor({
 createRoot(document.getElementById('root')).render(
 
   < StrictMode >
-    <emojiCursor></emojiCursor>
+
 
 
     <App />

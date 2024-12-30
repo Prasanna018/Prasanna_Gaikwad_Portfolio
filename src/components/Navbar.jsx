@@ -5,7 +5,7 @@ import React from 'react';
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
-  console.log(active)
+
 
 
   const navItems = [

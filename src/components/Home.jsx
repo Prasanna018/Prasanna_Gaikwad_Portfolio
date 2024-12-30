@@ -6,7 +6,9 @@ const Home = () => {
   return (
     <section id="home" className="pt-[100px] min-h-screen flex items-center sm:justify-around bg-primary px-4 lg:flex-row flex-col md:flex-col sm:flex-col text-center">
 
-      <div className=' m-4'>
+
+
+      <div className='m-4'>
         <img className='rounded-[50%] shadow-md' src={logo}></img>
 
       </div>

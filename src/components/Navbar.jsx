@@ -4,8 +4,8 @@ import { motion } from 'framer-motion';
 import React from 'react';
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const [active, setActive] = useState('home');
-  console.log(active)
+
+
 
 
   const navItems = [
@@ -13,7 +13,7 @@ const Navbar = () => {
     { name: 'Skills', to: 'skills' },
     { name: 'Projects', to: 'projects' },
     { name: 'Contact', to: 'contact' },
-    { name: 'Resume', to: "/public/resume.pdf", download: "Resume" }
+    { name: 'Resume', to: "/resume.pdf", download: "Resume" }
 
   ];
 

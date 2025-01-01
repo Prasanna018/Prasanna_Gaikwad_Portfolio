@@ -6,8 +6,6 @@ const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
 
-
-
   const navItems = [
     { name: 'Home', to: 'home' },
     { name: 'Skills', to: 'skills' },
@@ -102,7 +100,7 @@ const Navbar = () => {
             className="md:hidden"
           >
 
-            <div className="px-2 pt-2 pb-3 space-y-1">
+            <div className="px-2 pt-2 pb-3 space-y-1 flex items-center justify-center flex-col">
               {navItems.map((item, index) => (
                 <motion.div
                   key={item.name}

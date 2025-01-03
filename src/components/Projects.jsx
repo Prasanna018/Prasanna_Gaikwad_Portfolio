@@ -3,6 +3,7 @@ import movie_loom from '../assets/movie-loom.png'
 import quick_rent from '../assets/quick-rent.png'
 import { useInView } from 'react-intersection-observer';
 import blog_verse from '../assets/blogverse.png'
+import chit_chat from '../assets/chit-chat.png'
 import React from 'react';
 const Projects = () => {
   const [ref, inView] = useInView({
@@ -24,6 +25,15 @@ const Projects = () => {
       tech: ['React', 'Tailwind', 'Framer-Motion', 'CSS'],
       image: quick_rent,
       link: "http://renting-platform-frontend.vercel.app/"
+    },
+    {
+      title: "Chit-Chat Chating Web App",
+      description: "A Full Stack chating webapp platform where user can chat in real time ",
+      tech: ["React", "Socket.io", "Node", "DaisyUi", "Express", "Tailwind"],
+      image: chit_chat,
+      link: "https://chit-chat-1jwq.onrender.com/"
+
+
     },
     {
       title: "Comming Soon",

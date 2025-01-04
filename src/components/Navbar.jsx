@@ -117,7 +117,7 @@ const Navbar = () => {
                         smooth={true}
                         duration={500}
 
-                        className="text-textSecondary hover:text-secondary cursor-pointer"
+                        className="text-textSecondary space-y-2 hover:text-secondary cursor-pointer"
                       >
 
                         {item.name}

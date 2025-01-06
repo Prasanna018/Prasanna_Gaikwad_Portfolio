@@ -28,7 +28,7 @@ const Projects = () => {
     },
     {
       title: "Chit-Chat Chating Web App",
-      description: "A Full Stack chating webapp platform where user can chat in real time ",
+      description: "A Full Stack chating (Chit-Chat) webapp platform where user can chat in real time ",
       tech: ["React", "Socket.io", "Node", "DaisyUi", "Express", "Tailwind"],
       image: chit_chat,
       link: "https://chit-chat-1jwq.onrender.com/"

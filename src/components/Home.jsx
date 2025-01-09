@@ -27,7 +27,7 @@ const Home = () => {
           </h2>
           <p className="text-textSecondary max-w-2xl mb-8">
             I'm a full-stack developer specializing in building exceptional digital experiences.
-            Currently, I'm focused on building accessible, human-centered products.
+            Currently, I'm focused on building accessible, human-centered products with my expertise.
           </p>
           <Link
             to="projects"

@@ -26,7 +26,7 @@ const Home = () => {
             I build things for the web.
           </h2>
           <p className="text-textSecondary max-w-2xl mb-8">
-            I'm a full-stack developer specializing in building exceptional digital experiences.
+            I am a full-stack developer specializing in building exceptional digital experiences.
             Currently, I'm focused on building accessible, human-centered products with my expertise.
           </p>
           <Link

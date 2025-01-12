@@ -1,19 +1,25 @@
 import { useState } from 'react';
-import { Link } from 'react-scroll';
+import { Link, scroller } from 'react-scroll';
 import { motion } from 'framer-motion';
 import React from 'react';
+
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
-
+  const [selectedTab, setSelectedTab] = useState('Home'); // State for selected tab
 
   const navItems = [
     { name: 'Home', to: 'home' },
     { name: 'Skills', to: 'skills' },
     { name: 'Projects', to: 'projects' },
     { name: 'Contact', to: 'contact' },
-    { name: 'Resume', to: "/resume.pdf", download: "Resume" }
-
+    { name: 'Resume', to: '/resume.pdf', download: 'Resume' },
   ];
+
+  // Handle tab click to update state and scroll to the section
+  const handleTabClick = (name) => {
+    setSelectedTab(name);
+    setIsOpen(false); // Close mobile menu on selection
+  };
 
   return (
     <nav className="fixed w-full bg-primary/90 backdrop-blur-sm z-50">
@@ -25,7 +31,9 @@ const Navbar = () => {
             transition={{ duration: 0.5 }}
             className="text-secondary font-bold text-xl cursor-pointer"
           >
-            <Link to='home'> Prasanna Gaikwad</Link>
+            <Link to="home" smooth={true} duration={500}>
+              Prasanna Gaikwad
+            </Link>
           </motion.div>
 
           {/* Desktop Menu */}
@@ -37,26 +45,25 @@ const Navbar = () => {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
               >
-                {
-                  item.download ? (<a href={item.to} download={item.download} >
+                {item.download ? (
+                  <a href={item.to} download={item.download} className="text-textSecondary hover:text-secondary">
                     {item.name}
-                  </a>) :
-                    (<Link
-
-                      to={item.to}
-                      smooth={true}
-                      duration={500}
-
-                      className={` text-textSecondary hover:text-secondary hover:scale-110 cursor-pointer
-                        
-                        `}
-                    >
-
-                      {item.name}
-                    </Link>)
-                }
-
-
+                  </a>
+                ) : (
+                  <Link
+                    onClick={() => handleTabClick(item.name)}
+                    to={item.to}
+                    smooth={true}
+                    duration={500}
+                    spy={true} // Watches the scroll position
+                    activeClass="underline text-secondary" // Add underline dynamically
+                    onSetActive={() => setSelectedTab(item.name)} // Update state when active
+                    className={`text-textSecondary hover:text-secondary hover:scale-110 cursor-pointer ${selectedTab === item.name ? 'underline text-secondary' : ''
+                      }`}
+                  >
+                    {item.name}
+                  </Link>
+                )}
               </motion.div>
             ))}
           </div>
@@ -101,7 +108,6 @@ const Navbar = () => {
             transition={{ duration: 0.2 }}
             className="md:hidden"
           >
-
             <div className="px-2 pt-2 pb-3 space-y-1 flex items-center justify-center flex-col">
               {navItems.map((item, index) => (
                 <motion.div
@@ -110,27 +116,28 @@ const Navbar = () => {
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
                 >
-                  {
-                    item.download ? (<a href={item.to} download={item.download} >
+                  {item.download ? (
+                    <a href={item.to} download={item.download} className="text-textSecondary hover:text-secondary">
                       {item.name}
-                    </a>) :
-                      (<Link
-                        to={item.to}
-                        smooth={true}
-                        duration={500}
-
-                        className="text-textSecondary space-y-2 hover:text-secondary cursor-pointer hover:scale-105"
-                      >
-
-                        {item.name}
-                      </Link>)
-                  }
-
-
+                    </a>
+                  ) : (
+                    <Link
+                      onClick={() => handleTabClick(item.name)}
+                      to={item.to}
+                      smooth={true}
+                      duration={500}
+                      spy={true} // Watches the scroll position
+                      activeClass="underline text-secondary" // Add underline dynamically
+                      onSetActive={() => setSelectedTab(item.name)} // Update state when active
+                      className={`text-textSecondary hover:text-secondary cursor-pointer hover:scale-105 ${selectedTab === item.name ? 'underline text-secondary' : ''
+                        }`}
+                    >
+                      {item.name}
+                    </Link>
+                  )}
                 </motion.div>
               ))}
             </div>
-
           </motion.div>
         )}
       </div>

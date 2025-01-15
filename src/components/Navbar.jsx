@@ -31,9 +31,12 @@ const Navbar = () => {
             transition={{ duration: 0.5 }}
             className="text-secondary font-bold text-xl cursor-pointer"
           >
+
+
             <Link to="home" smooth={true} duration={500}>
               Prasanna Gaikwad
             </Link>
+
           </motion.div>
 
           {/* Desktop Menu */}

@@ -4,6 +4,7 @@ import quick_rent from '../assets/quick-rent.png'
 import { useInView } from 'react-intersection-observer';
 import blog_verse from '../assets/blogverse.png'
 import chit_chat from '../assets/chit-chat.png'
+import Liquor_shop from '../assets/liquor_shop.png'
 import React from 'react';
 const Projects = () => {
   const [ref, inView] = useInView({
@@ -36,6 +37,13 @@ const Projects = () => {
 
     },
     {
+      title: "Liquor Shop Frontend",
+      description: "A modern frontend for Liquor Shop",
+      tech: ["Next", "Typescript", "Tailwind", "Framer"],
+      image: Liquor_shop,
+      link: "https://liquor-shop-eight.vercel.app/"
+    },
+    {
       title: "Comming Soon",
       description: "A full stack Bloging website for every categories where peoples share there stories",
       tech: [],
@@ -44,7 +52,7 @@ const Projects = () => {
   ];
 
   return (
-    <section id="projects" className="min-h-screen bg-primary py-20 px-4">
+    <section id="projects" className="min-h-screen  py-20 px-4">
       <div className="max-w-6xl mx-auto">
         <motion.h2
           initial={{ opacity: 0 }}

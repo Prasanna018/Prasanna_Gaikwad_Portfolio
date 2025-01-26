@@ -3,7 +3,7 @@ import React from 'react';
 import { email_id } from '../common.jsx/common';
 const Contact = () => {
   return (
-    <section id="contact" className="min-h-screen bg-primary py-20 px-4 flex items-center justify-center">
+    <section id="contact" className="min-h-screen  py-20 px-4 flex items-center justify-center">
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}

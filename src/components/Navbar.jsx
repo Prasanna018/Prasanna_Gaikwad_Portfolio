@@ -11,6 +11,7 @@ const Navbar = () => {
     { name: 'Home', to: 'home' },
     { name: 'Skills', to: 'skills' },
     { name: 'Projects', to: 'projects' },
+    { name: 'Experience', to: 'experience' },
     { name: 'Contact', to: 'contact' },
     { name: 'Resume', to: '/resume.pdf', download: 'Resume' },
   ];
@@ -22,7 +23,7 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="fixed w-full bg-primary/90 backdrop-blur-sm z-50">
+    <nav className="fixed w-full  backdrop-blur-sm z-50">
       <div className="max-w-6xl mx-auto px-4">
         <div className="flex justify-between items-center h-16 ">
           <motion.div

@@ -42,7 +42,7 @@ function App() {
 
       <div className="relative min-h-screen">
         {/* Background Video */}
-        <video
+        {/* <video
 
           ref={videoRef}
           autoPlay
@@ -51,7 +51,7 @@ function App() {
           muted
           src={bg}
           className="fixed top-0 left-0 w-full h-full object-cover -z-10"
-        ></video>
+        ></video> */}
 
         {/* Content */}
         <div className="relative z-10">

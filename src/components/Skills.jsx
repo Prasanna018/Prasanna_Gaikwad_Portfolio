@@ -47,7 +47,7 @@ const Skills = () => {
     ));
 
   return (
-    <section id="skills" className="min-h-screen py-30 px-4  lg:pt-20">
+    <section id="skills" className="min-h-screen py-30 px-4 lg:pt-20">
       <div className="max-w-6xl mx-auto">
         <h2 className="text-4xl font-bold text-textPrimary text-center mb-16">
           Skills & Technologies
@@ -55,18 +55,14 @@ const Skills = () => {
         <div className="space-y-20">
           {/* Row 1: Scroll to the left */}
           <div className="relative overflow-hidden w-full h-28 group">
-            <div
-              className="flex gap-12 animate-scroll-left group-hover:pause-animation"
-            >
+            <div className="flex gap-12 animate-scroll-left">
               {renderSkills(skillsRow1.concat(skillsRow1))}
             </div>
           </div>
 
           {/* Row 2: Scroll to the right */}
           <div className="relative overflow-hidden w-full h-28 group">
-            <div
-              className="flex gap-12 animate-scroll-right group-hover:pause-animation"
-            >
+            <div className="flex gap-12 animate-scroll-right">
               {renderSkills(skillsRow2.concat(skillsRow2))}
             </div>
           </div>
@@ -77,3 +73,4 @@ const Skills = () => {
 };
 
 export default Skills;
+

@@ -5,6 +5,7 @@ import { useInView } from 'react-intersection-observer';
 import blog_verse from '../assets/blogverse.png'
 import chit_chat from '../assets/chit-chat.png'
 import Liquor_shop from '../assets/liquor_shop.png'
+import hotelhub from '../assets/hotelhub.png'
 import React from 'react';
 const Projects = () => {
   const [ref, inView] = useInView({
@@ -42,6 +43,13 @@ const Projects = () => {
       tech: ["Next", "Typescript", "Tailwind", "Framer"],
       image: Liquor_shop,
       link: "https://liquor-shop-eight.vercel.app/"
+    },
+    {
+      title: "Hotel Hub ",
+      description: "A frontend for Hotel booking website with search & filter features",
+      tech: ["Next", "Motion", "Tailwind"],
+      image: hotelhub,
+      link: "https://hotel-hub-sepia.vercel.app/"
     },
     {
       title: "Comming Soon",

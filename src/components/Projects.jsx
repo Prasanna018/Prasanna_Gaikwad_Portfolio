@@ -56,7 +56,8 @@ const Projects = () => {
       title: "Home Renting Platform",
       description: "A frontend for home renting platfrom were user searhc,filter the home properties",
       tech: ['Next', "Tailwind", "Framer-Motion"],
-      image: home_renting
+      image: home_renting,
+      link: "https://home-rental-platform-eta.vercel.app/"
 
     },
     {

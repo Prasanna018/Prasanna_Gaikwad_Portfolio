@@ -1,13 +1,14 @@
-import { motion } from 'framer-motion';
-import movie_loom from '../assets/movie-loom.png'
-import quick_rent from '../assets/quick-rent.png'
-import { useInView } from 'react-intersection-observer';
-import blog_verse from '../assets/blogverse.png'
-import chit_chat from '../assets/chit-chat.png'
-import Liquor_shop from '../assets/liquor_shop.png'
-import hotelhub from '../assets/hotelhub.png'
-import home_renting from '../assets/home_rental.png'
-import React from 'react';
+import { motion } from "framer-motion";
+import { useInView } from "react-intersection-observer";
+import movie_loom from "../assets/movie-loom.png";
+import quick_rent from "../assets/quick-rent.png";
+import blog_verse from "../assets/blogverse.png";
+import chit_chat from "../assets/chit-chat.png";
+import Liquor_shop from "../assets/liquor_shop.png";
+import hotelhub from "../assets/hotelhub.png";
+import home_renting from "../assets/home_rental.png";
+import React from "react";
+
 const Projects = () => {
   const [ref, inView] = useInView({
     triggerOnce: true,
@@ -17,59 +18,56 @@ const Projects = () => {
   const projects = [
     {
       title: "Movie-Loom Website",
-      description: "A full-stack (Netflix like) platform built with MERN stack",
+      description: "A full-stack (Netflix-like) platform built with MERN stack",
       tech: ["React", "Node.js", "MongoDB", "Express"],
       image: movie_loom,
-      link: "https://movie-loom-client.onrender.com/"
+      link: "https://movie-loom-client.onrender.com/",
     },
     {
       title: "Quick-Rent Renting Platform",
-      description: "A Responsive frontend of a rental platform designed for fast and seamless renting options",
-      tech: ['React', 'Tailwind', 'Framer-Motion', 'CSS'],
+      description: "A responsive frontend of a rental platform designed for fast and seamless renting options",
+      tech: ["React", "Tailwind", "Framer-Motion", "CSS"],
       image: quick_rent,
-      link: "http://renting-platform-frontend.vercel.app/"
+      link: "http://renting-platform-frontend.vercel.app/",
     },
     {
-      title: "Chit-Chat Chating Web App",
-      description: "A Full Stack chating (Chit-Chat) webapp platform where user can chat in real time ",
-      tech: ["React", "Socket.io", "Node", "DaisyUi", "Express", "Tailwind"],
+      title: "Chit-Chat Chatting Web App",
+      description: "A full-stack chatting (Chit-Chat) web app where users can chat in real-time",
+      tech: ["React", "Socket.io", "Node", "DaisyUI", "Express", "Tailwind"],
       image: chit_chat,
-      link: "https://chit-chat-1jwq.onrender.com/"
-
-
+      link: "https://chit-chat-1jwq.onrender.com/",
     },
     {
       title: "Liquor Shop Frontend",
-      description: "A modern frontend for Liquor Shop",
-      tech: ["Next", "Typescript", "Tailwind", "Framer"],
+      description: "A modern frontend for a liquor shop",
+      tech: ["Next", "TypeScript", "Tailwind", "Framer"],
       image: Liquor_shop,
-      link: "https://liquor-shop-eight.vercel.app/"
+      link: "https://liquor-shop-eight.vercel.app/",
     },
     {
-      title: "Hotel Hub ",
-      description: "A frontend for Hotel booking website with search & filter features",
+      title: "Hotel Hub",
+      description: "A frontend for a hotel booking website with search & filter features",
       tech: ["Next", "Motion", "Tailwind"],
       image: hotelhub,
-      link: "https://hotel-hub-sepia.vercel.app/"
+      link: "https://hotel-hub-sepia.vercel.app/",
     },
     {
       title: "Home Renting Platform",
-      description: "A frontend for home renting platfrom were user searhc,filter the home properties",
-      tech: ['Next', "Tailwind", "Framer-Motion"],
+      description: "A frontend for a home renting platform where users search & filter home properties",
+      tech: ["Next", "Tailwind", "Framer-Motion"],
       image: home_renting,
-      link: "https://home-rental-platform-eta.vercel.app/"
-
+      link: "https://home-rental-platform-eta.vercel.app/",
     },
     {
-      title: "Comming Soon",
-      description: "A full stack Bloging website for every categories where peoples share there stories",
+      title: "Coming Soon",
+      description: "A full-stack blogging website for various categories where people share their stories",
       tech: [],
       image: blog_verse,
-    }
+    },
   ];
 
   return (
-    <section id="projects" className="min-h-screen  py-20 px-4">
+    <section id="projects" className="min-h-screen py-20 px-4">
       <div className="max-w-6xl mx-auto">
         <motion.h2
           initial={{ opacity: 0 }}
@@ -82,39 +80,30 @@ const Projects = () => {
           {projects.map((project, index) => (
             <motion.div
               key={project.title}
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 0, y: -50 }}
               animate={inView ? { opacity: 1, y: 0 } : {}}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
-              whileHover={{ y: -10 }}
-              className="bg-white/5 rounded-lg overflow-hidden"
+              transition={{ duration: 0.6, delay: index * 0.1 }}
+              whileHover={{ scale: 1.05 }}
+              className="bg-white/5 rounded-lg overflow-hidden shadow-lg"
             >
-              <img
-                src={project.image}
-                alt={project.title}
-                className="w-full h-48 object-cover"
-              />
+              <img src={project.image} alt={project.title} className="w-full h-48 object-cover" />
               <div className="p-6">
-                <h3 className="text-xl font-bold text-textPrimary mb-2">
-                  {project.title}
-                </h3>
+                <h3 className="text-xl font-bold text-textPrimary mb-2">{project.title}</h3>
                 <p className="text-textSecondary mb-4">{project.description}</p>
                 <div className="flex flex-wrap gap-2">
                   {project.tech.map((tech) => (
-                    <span
-                      key={tech}
-                      className="text-sm text-secondary bg-secondary/10 px-3 py-1 rounded"
-                    >
+                    <span key={tech} className="text-sm text-secondary bg-secondary/10 px-3 py-1 rounded">
                       {tech}
                     </span>
-
                   ))}
                 </div>
-                <div className='flex justify-center items-center'>
-
-                  {
-                    project.link ? (<a className='underline text-blue-700 font-bold' target='_blank' href={project.link}>Live Demo</a>) : ""
-                  }
-                </div>
+                {project.link && (
+                  <div className="flex justify-center items-center mt-4">
+                    <a className="underline text-blue-700 font-bold" target="_blank" href={project.link} rel="noopener noreferrer">
+                      Live Demo
+                    </a>
+                  </div>
+                )}
               </div>
             </motion.div>
           ))}

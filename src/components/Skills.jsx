@@ -47,7 +47,7 @@ const Skills = () => {
     ));
 
   return (
-    <section id="skills" className="min-h-screen py-30 px-4 lg:pt-20">
+    <section id="skills" className="min-h-screen py-30 px-4 pt-20 lg:pt-20">
       <div className="max-w-6xl mx-auto">
         <h2 className="text-4xl font-bold text-textPrimary text-center mb-16">
           Skills & Technologies

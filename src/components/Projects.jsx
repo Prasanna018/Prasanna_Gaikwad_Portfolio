@@ -10,103 +10,54 @@ import home_renting from "../assets/home_rental.png";
 import React from "react";
 
 const Projects = () => {
-  const [ref, inView] = useInView({
-    triggerOnce: true,
-    threshold: 0.1,
-  });
+  const [ref, inView] = useInView({ triggerOnce: true, threshold: 0.1 });
 
   const projects = [
-    {
-      title: "Movie-Loom Website",
-      description: "A full-stack (Netflix-like) platform built with MERN stack",
-      tech: ["React", "Node.js", "MongoDB", "Express"],
-      image: movie_loom,
-      link: "https://movie-loom-client.onrender.com/",
-    },
-    {
-      title: "Quick-Rent Renting Platform",
-      description: "A responsive frontend of a rental platform designed for fast and seamless renting options",
-      tech: ["React", "Tailwind", "Framer-Motion", "CSS"],
-      image: quick_rent,
-      link: "http://renting-platform-frontend.vercel.app/",
-    },
-    {
-      title: "Chit-Chat Chatting Web App",
-      description: "A full-stack chatting (Chit-Chat) web app where users can chat in real-time",
-      tech: ["React", "Socket.io", "Node", "DaisyUI", "Express", "Tailwind"],
-      image: chit_chat,
-      link: "https://chit-chat-1jwq.onrender.com/",
-    },
-    {
-      title: "Liquor Shop Frontend",
-      description: "A modern frontend for a liquor shop",
-      tech: ["Next", "TypeScript", "Tailwind", "Framer"],
-      image: Liquor_shop,
-      link: "https://liquor-shop-eight.vercel.app/",
-    },
-    {
-      title: "Hotel Hub",
-      description: "A frontend for a hotel booking website with search & filter features",
-      tech: ["Next", "Motion", "Tailwind"],
-      image: hotelhub,
-      link: "https://hotel-hub-sepia.vercel.app/",
-    },
-    {
-      title: "Home Renting Platform",
-      description: "A frontend for a home renting platform where users search & filter home properties",
-      tech: ["Next", "Tailwind", "Framer-Motion"],
-      image: home_renting,
-      link: "https://home-rental-platform-eta.vercel.app/",
-    },
-    {
-      title: "Coming Soon",
-      description: "A full-stack blogging website for various categories where people share their stories",
-      tech: [],
-      image: blog_verse,
-    },
+    { title: "Movie-Loom Website", image: movie_loom, link: "https://movie-loom-client.onrender.com/" },
+    { title: "Quick-Rent Renting Platform", image: quick_rent, link: "http://renting-platform-frontend.vercel.app/" },
+    { title: "Chit-Chat Chatting Web App", image: chit_chat, link: "https://chit-chat-1jwq.onrender.com/" },
+    { title: "Liquor Shop Frontend", image: Liquor_shop, link: "https://liquor-shop-eight.vercel.app/" },
+    { title: "Hotel Hub", image: hotelhub, link: "https://hotel-hub-sepia.vercel.app/" },
+    { title: "Home Renting Platform", image: home_renting, link: "https://home-rental-platform-eta.vercel.app/" },
+    { title: "Coming Soon", image: blog_verse },
   ];
 
   return (
     <section id="projects" className="min-h-screen py-20 px-4">
       <div className="max-w-6xl mx-auto">
-        <motion.h2
-          initial={{ opacity: 0 }}
-          animate={inView ? { opacity: 1 } : {}}
-          className="text-4xl font-bold text-textPrimary text-center mb-16"
-        >
+        <motion.h2 initial={{ opacity: 0 }} animate={inView ? { opacity: 1 } : {}} className="text-4xl font-bold text-center mb-16">
           Featured Projects
         </motion.h2>
         <div ref={ref} className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {projects.map((project, index) => (
-            <motion.div
-              key={project.title}
-              initial={{ opacity: 0, y: -50 }}
-              animate={inView ? { opacity: 1, y: 0 } : {}}
-              transition={{ duration: 0.6, delay: index * 0.1 }}
-              whileHover={{ scale: 1.05 }}
-              className="bg-white/5 rounded-lg overflow-hidden shadow-lg"
-            >
-              <img src={project.image} alt={project.title} className="w-full h-48 object-cover" />
-              <div className="p-6">
-                <h3 className="text-xl font-bold text-textPrimary mb-2">{project.title}</h3>
-                <p className="text-textSecondary mb-4">{project.description}</p>
-                <div className="flex flex-wrap gap-2">
-                  {project.tech.map((tech) => (
-                    <span key={tech} className="text-sm text-secondary bg-secondary/10 px-3 py-1 rounded">
-                      {tech}
-                    </span>
-                  ))}
+          {projects.map((project, index) => {
+            const variants = {
+              hidden: { opacity: 0, x: index % 3 === 0 ? -100 : index % 3 === 2 ? 100 : 0 },
+              visible: { opacity: 1, x: 0, transition: { duration: 0.6, delay: index * 0.1 } }
+            };
+
+            return (
+              <motion.div
+                key={project.title}
+                initial="hidden"
+                animate={inView ? "visible" : "hidden"}
+                variants={variants}
+                whileHover={{ scale: 1.05 }}
+                className="bg-white/5 rounded-lg overflow-hidden shadow-lg"
+              >
+                <img src={project.image} alt={project.title} className="w-full h-48 object-cover" />
+                <div className="p-6">
+                  <h3 className="text-xl font-bold mb-2">{project.title}</h3>
+                  {project.link && (
+                    <div className="flex justify-center items-center mt-4">
+                      <a className="underline text-blue-700 font-bold" target="_blank" href={project.link} rel="noopener noreferrer">
+                        Live Demo
+                      </a>
+                    </div>
+                  )}
                 </div>
-                {project.link && (
-                  <div className="flex justify-center items-center mt-4">
-                    <a className="underline text-blue-700 font-bold" target="_blank" href={project.link} rel="noopener noreferrer">
-                      Live Demo
-                    </a>
-                  </div>
-                )}
-              </div>
-            </motion.div>
-          ))}
+              </motion.div>
+            );
+          })}
         </div>
       </div>
     </section>

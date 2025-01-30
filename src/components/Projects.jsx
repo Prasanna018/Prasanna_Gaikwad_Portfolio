@@ -6,6 +6,7 @@ import blog_verse from '../assets/blogverse.png'
 import chit_chat from '../assets/chit-chat.png'
 import Liquor_shop from '../assets/liquor_shop.png'
 import hotelhub from '../assets/hotelhub.png'
+import home_renting from '../assets/home_rental.png'
 import React from 'react';
 const Projects = () => {
   const [ref, inView] = useInView({
@@ -50,6 +51,13 @@ const Projects = () => {
       tech: ["Next", "Motion", "Tailwind"],
       image: hotelhub,
       link: "https://hotel-hub-sepia.vercel.app/"
+    },
+    {
+      title: "Home Renting Platform",
+      description: "A frontend for home renting platfrom were user searhc,filter the home properties",
+      tech: ['Next', "Tailwind", "Framer-Motion"],
+      image: home_renting
+
     },
     {
       title: "Comming Soon",

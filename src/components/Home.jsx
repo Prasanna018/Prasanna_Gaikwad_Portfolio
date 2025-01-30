@@ -28,7 +28,7 @@ const Home = () => {
         initial={{ opacity: 0, x: window.innerWidth }}
         animate={{ opacity: 1, x: 0 }}
         transition={{ duration: 0.8 }}
-        className="w-full lg:w-1/2 flex flex-col md:text-center items-center lg:items-start"
+        className="w-full lg:w-1/2 flex flex-col md:text-center  items-center lg:items-center"
       >
         <p className="text-secondary mb-4 text-sm sm:text-base">Hi, my name is</p>
 

@@ -14,7 +14,7 @@ const Navbar = () => {
     { name: 'Projects', to: 'projects' },
     // { name: 'Experience', to: 'experience' },
     { name: 'Contact', to: 'contact' },
-    { name: 'Resume', to: '/Prasanna Gaikwad Resumepdf (2).pdf', download: 'Resume' },
+    { name: 'Resume', to: resumeUrl, download: 'Resume' },
   ];
 
   // Handle tab click to update state and scroll to the section

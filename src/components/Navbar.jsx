@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { Link, scroller } from 'react-scroll';
 import { motion } from 'framer-motion';
 import React from 'react';
+import { resumeUrl } from '../common.jsx/common';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -13,7 +14,7 @@ const Navbar = () => {
     { name: 'Projects', to: 'projects' },
     // { name: 'Experience', to: 'experience' },
     { name: 'Contact', to: 'contact' },
-    { name: 'Resume', to: '/resume.pdf', download: 'Resume' },
+    { name: 'Resume', to: resumeUrl, download: 'Resume' },
   ];
 
   // Handle tab click to update state and scroll to the section

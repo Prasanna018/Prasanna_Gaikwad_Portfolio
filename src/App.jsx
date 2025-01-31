@@ -31,15 +31,15 @@ function App() {
 
       <div className="relative min-h-screen">
 
-        <div className="relative z-10">
-          <Navbar />
-          <Home />
-          <Skills />
-          <Projects />
-          {/* <Experience /> */}
-          <Contact />
-        </div>
+
+        <Navbar />
+        <Home />
+        <Skills />
+        <Projects />
+        {/* <Experience /> */}
+        <Contact />
       </div>
+
     </>
   );
 }

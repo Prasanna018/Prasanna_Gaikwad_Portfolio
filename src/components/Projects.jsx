@@ -7,17 +7,20 @@ import chit_chat from "../assets/chit-chat.png";
 import Liquor_shop from "../assets/liquor_shop.png";
 import hotelhub from "../assets/hotelhub.png";
 import home_renting from "../assets/home_rental.png";
+import elegance from '../assets/sallon.png'
 import React from "react";
 
 const Projects = () => {
   const [ref, inView] = useInView({ triggerOnce: true, threshold: 0.1 });
 
   const projects = [
+    { title: "Elegance Sallon Shop", image: elegance, link: "https://elegance-sallon-shop.vercel.app/" },
     { title: "Movie-Loom Website", image: movie_loom, link: "https://movie-loom-client.onrender.com/" },
     { title: "Quick-Rent Renting Platform", image: quick_rent, link: "http://renting-platform-frontend.vercel.app/" },
     { title: "Chit-Chat Chatting Web App", image: chit_chat, link: "https://chit-chat-1jwq.onrender.com/" },
     { title: "Liquor Shop Frontend", image: Liquor_shop, link: "https://liquor-shop-eight.vercel.app/" },
     { title: "Hotel Hub", image: hotelhub, link: "https://hotel-hub-sepia.vercel.app/" },
+
     { title: "Home Renting Platform", image: home_renting, link: "https://home-rental-platform-eta.vercel.app/" },
     { title: "Coming Soon", image: blog_verse },
   ];

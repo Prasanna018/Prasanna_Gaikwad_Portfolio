@@ -8,14 +8,17 @@ import Liquor_shop from "../assets/liquor_shop.png";
 import hotelhub from "../assets/hotelhub.png";
 import home_renting from "../assets/home_rental.png";
 import elegance from '../assets/sallon.png'
+import eventify from '../assets/eventify.png'
 import React from "react";
 
 const Projects = () => {
   const [ref, inView] = useInView({ triggerOnce: true, threshold: 0.1 });
 
   const projects = [
+    { title: "Eventify ", image: eventify, link: "https://eventify-eight-phi.vercel.app/" },
     { title: "Elegance Sallon Shop", image: elegance, link: "https://elegance-sallon-shop.vercel.app/" },
     { title: "Movie-Loom Website", image: movie_loom, link: "https://movie-loom-client.onrender.com/" },
+
     { title: "Quick-Rent Renting Platform", image: quick_rent, link: "http://renting-platform-frontend.vercel.app/" },
     { title: "Chit-Chat Chatting Web App", image: chit_chat, link: "https://chit-chat-1jwq.onrender.com/" },
     { title: "Liquor Shop Frontend", image: Liquor_shop, link: "https://liquor-shop-eight.vercel.app/" },

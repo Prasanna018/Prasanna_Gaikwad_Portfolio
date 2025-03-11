@@ -52,15 +52,34 @@ const Home = () => {
           Currently, I am focused on developing accessible, human-centered products.
         </p>
 
-        <Link to="projects" smooth={true} duration={500} className="inline-block">
-          <motion.button
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-            className="border-2 border-secondary text-secondary px-6 py-3 rounded-lg hover:bg-secondary/10 text-base sm:text-lg"
-          >
-            Check out my work!
-          </motion.button>
-        </Link>
+        <div className='flex gap-x-4'>
+
+          <Link to="projects" smooth={true} duration={500} className="inline-block">
+            <motion.button
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              className="border-2 border-secondary text-secondary px-6 py-3 rounded-lg hover:bg-secondary/10 text-base sm:text-lg"
+            >
+              Check out my work!
+            </motion.button>
+          </Link>
+
+
+          <a href="https://tar-caravel-4ef.notion.site/Prasanna-Gaikwad-full-stack-developer-198ea83f935480dfa628dc7896e86786"
+
+            target='_blank'
+            smooth={true} duration={500} className="inline-block">
+            <motion.button
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              className="border-2 border-white text-white font-bold px-6 py-3 rounded-lg hover:bg-secondary/10 text-base sm:text-lg"
+            >
+              Check Out Project List
+            </motion.button>
+          </a>
+        </div>
+
+
       </motion.div>
     </section>
   );

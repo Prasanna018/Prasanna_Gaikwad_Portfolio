@@ -10,6 +10,7 @@ import home_renting from "../assets/home_rental.png";
 import elegance from '../assets/sallon.png'
 import eventify from '../assets/eventify.png'
 import foodhub from '../assets/foodhub.png'
+import coverai from '../assets/cover-letter.png'
 
 import React from "react";
 
@@ -17,6 +18,7 @@ const Projects = () => {
   const [ref, inView] = useInView({ triggerOnce: true, threshold: 0.1 });
 
   const projects = [
+    { title: "CoverLetterAI", image: coverai, link: "https://ai-cover-letter-generator-blush.vercel.app/" },
     { title: "Food Hub", image: foodhub, link: "https://foodhub-tau.vercel.app/" },
     { title: "Eventify ", image: eventify, link: "https://eventify-eight-phi.vercel.app/" },
     { title: "Elegance Sallon Shop", image: elegance, link: "https://elegance-sallon-shop.vercel.app/" },
